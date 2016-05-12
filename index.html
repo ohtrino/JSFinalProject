@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>TALES</title>
+      <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <section class="container">
+            <a href="#"><h1>TalesFrom...</h1></a>
+            <nav>
+              
+              <ul>
+              <!--
+              <button onclick=nextPage()>Next Page</button>-->
+                <li><a href="#">TalesFrom<span id='source'>CHOOSE</span></a>
+                  <ul class="sourceselect">
+                      <li id="TailsFromRetail"><a href="#">Retail</a></li>
+                      <li id="TailsFromTechSupport" ><a href="#">TechSupport</a></li>
+                      <li id="TalesFromYourServer"><a href="#" >YourServer</a></li>
+                      <li id="TalesFromThePizzaGuy"><a href="#">ThePizzaGuy</a></li>
+                      <li id="TalesFromTheCustomer"><a href="#" >TheCustomer</a></li>
+                      <li id="TalesFromEveryone"><a href='#'>Everyone</a></li>
+                      
+
+                  </ul>
+                </li>
+                <li><a href="#">Email Address:</a>
+                </li>
+                
+                 <a href="#" type="text" name="name" value="" id = "searchbar"></a>
+                
+                <li>
+                <form id="form">
+                <input id="savedReadingSpeed">
+                </form>
+                </li>
+                
+              </ul>
+              <section id="search">
+               
+              </section>
+            </nav>
+            <div class="clearfix"></div>
+          </section>
+        </header>
+        <div id="popUp" class="loader hidden">
+          <a href="#" onclick="hidePopUp()" class="closePopUp">X</a>
+          <div class="container">
+            <h1 id="popTitle">Article title here</h1>
+              <div id="speedRead" class="middle">
+              <button href="#" class="popUpAction" id="Slower" target="_blank" onclick="slower()">Slower</button>
+              <h2 id="readRate">200 WPM</h2>
+              <button href="#" class="popUpAction middle" id="Faster" target="_blank" onclick="faster()">Faster</button>              </div>
+
+            <h1 id="popDescription">
+              Article description/content here.
+            </h1>
+            <a href="#" class="popUpAction" id="LINK" target="_blank">Read more from source</a>
+             <button onclick="authenticate()" class="popUpAction">Save Your Speed</button>
+             <div id="Authenticate" class="hidden">
+             <form id="emailprompt">
+               <p>Enter Your Email Address Below And Press Enter. This will allow you to save your speed and comment on each tale:</p>
+                <input id="EMAIL"></input>
+                </form>
+             </div>
+          </div>
+        </div>
+        <section id="main" class="container">
+          <article class="article">
+            <section class="featuredImage">
+              <img src="images/article_placeholder_1.jpg" alt="" />
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3>Select a news source</h3></a>
+                <h6>Do it</h6>
+            </section>
+            <section class="impressions">
+              526
+            </section>
+            <div class="clearfix"></div>
+          </article>
+
+          <!--
+          
+          <article class="article">
+            <section class="featuredImage">
+              <img src="images/article_placeholder_2.jpg" alt="" />
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3>Test article title</h3></a>
+                <h6>Lifestyle</h6>
+            </section>
+            <section class="impressions">
+              526
+            </section>
+            <div class="clearfix"></div>
+          </article>
+          <article class="article">
+            <section class="featuredImage">
+              <img src="images/article_placeholder_2.jpg" alt="" />
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3>Test article title</h3></a>
+                <h6>Lifestyle</h6>
+            </section>
+            <section class="impressions">
+              526
+            </section>
+            <div class="clearfix"></div>
+          </article>
+          -->
+        
+        </section>
+        <script type='text/x-handlebars-template' id="articlehandlebars">
+            
+            <article class="article">
+            <section class="featuredImage">
+              <img src="{{image}}" alt=""/>
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3 class="title">{{title}}</h3></a>
+                <h6>{{type}}</h6>
+            </section>
+            <section class="impressions">
+              {{shares}}
+            </section>
+            <div class="clearfix"></div>
+            <p id="description"><span id="url">{{url}}</span>{{description}}</p>
+          </article>
+
+        </script>
+
+        <script type='text/x-handlebars-template' id="popupcomments">
+          <div id="popUp" class="loader hidden">
+          <a href="#" class="closePopUp">X</a>
+          <div class="container">
+          </div>
+        </script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="js/app.js"></script>
+       
+        
+
+
+    </body>
+</html>
